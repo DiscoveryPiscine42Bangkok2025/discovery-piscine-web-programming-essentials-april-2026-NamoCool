@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .calculator-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        input[type="text"] {
+            width: 100px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        select, input[type="submit"] {
+            padding: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <input type="text" id="left" placeholder="Left">
+        
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        
+        <input type="text" id="right" placeholder="Right">
+        
+        <input type="submit" value="Try me!" id="submit-btn">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnSubmit = document.getElementById('submit-btn');
+
+            btnSubmit.addEventListener('click', calculate);
+
+            setInterval(() => {
+                alert('Please, use me...');
+            }, 30000);
+
+            function calculate() {
+                const leftStr = document.getElementById('left').value;
+                const rightStr = document.getElementById('right').value;
+                const operator = document.getElementById('operator').value;
+
+                const isPositiveInteger = (str) => /^\d+$/.test(str);
+
+                if (!isPositiveInteger(leftStr) || !isPositiveInteger(rightStr)) {
+                    alert('Error :(');
+                    return;
+                }
+
+                const leftNum = parseInt(leftStr, 10);
+                const rightNum = parseInt(rightStr, 10);
+                let result;
+
+                if ((operator === '/' || operator === '%') && rightNum === 0) {
+                    console.log("It's over 9000!");
+                    alert("It's over 9000!");
+                    return;
+                }
+
+                switch (operator) {
+                    case '+':
+                        result = leftNum + rightNum;
+                        break;
+                    case '-':
+                        result = leftNum - rightNum;
+                        break;
+                    case '*':
+                        result = leftNum * rightNum;
+                        break;
+                    case '/':
+                        result = leftNum / rightNum;
+                        break;
+                    case '%':
+                        result = leftNum % rightNum;
+                        break;
+                }
+
+                console.log(result);
+                alert(result);
+            }
+        });
+    </script>
+</body>
+</html>
