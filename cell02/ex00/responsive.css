@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100vw;
+    height: 100vh;
+}
+
+td {
+    padding: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.box-lightblue {
+    background-color: lightblue;
+}
+
+.box-lightcoral {
+    background-color: lightcoral;
+}
+
+table a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+table a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
