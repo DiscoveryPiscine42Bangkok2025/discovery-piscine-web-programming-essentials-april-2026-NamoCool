@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 40px; 
+            background-color: #f9f9f9;
+        }
+        #ft_list { 
+            width: 350px; 
+            min-height: 50px; 
+            margin-top: 20px; 
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .todo-item { 
+            background: #fff; 
+            padding: 15px; 
+            margin-bottom: 10px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            border: 1px solid #ddd; 
+            word-wrap: break-word; 
+            transition: background-color 0.2s;
+        }
+        .todo-item:hover { 
+            background: #ffe6e6; 
+            border-color: #ffcccc; 
+        }
+        .todo-item:last-child {
+            margin-bottom: 0;
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            border: none; 
+            background: #007bff; 
+            color: white;
+        }
+        button:hover { 
+            background: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <button id="New">New</button>
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
