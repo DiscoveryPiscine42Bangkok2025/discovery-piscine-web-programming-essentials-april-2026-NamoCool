@@ -1,0 +1,76 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; /* Helps align the main content next to the sidebar */
+}
+
+/* Vertical Sidebar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full screen height */
+    width: 80px;   /* Slim width */
+    background-color: #1a1a1a;
+    z-index: 1000;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers links vertically */
+}
+
+/* Expand on hover for a "cool" effect */
+.navbar:hover {
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul li {
+    width: 100%;
+}
+
+ul li a {
+    display: block;
+    color: #999;
+    padding: 20px;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap; /* Prevents text wrapping when sidebar is slim */
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: white;
+    background-color: #333;
+    padding-left: 30px; /* Slight indent effect */
+}
+
+/* Content adjustment */
+.section {
+    margin-left: 80px; /* Prevents content from being under the navbar */
+    width: calc(100% - 80px);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+#home { background: #f4a261; }
+#news { background: #2a9d8f; }
+#contact { background: #e76f51; }
+#about { background: #264653; }
