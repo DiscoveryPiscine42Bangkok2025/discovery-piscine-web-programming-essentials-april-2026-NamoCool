@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Mother's Day!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f8fb;
+      --card-bg: #ffffff;
+      --primary: #0284c7;        /* Vibrant ocean blue */
+      --primary-hover: #0369a1;  /* Deeper blue for buttons */
+      --accent: #38bdf8;         /* Light sky blue */
+      --text: #0f172a;           /* Dark slate navy */
+      --text-light: #64748b;     /* Muted slate text */
+      --border-blue: #bae6fd;    /* Soft powder blue border */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #e0f2fe 0%, var(--bg) 100%);
+    }
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section { margin-top: 40px; }
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: var(--text);
+    }
+
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid var(--accent);
+      margin-left: 10px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.06);
+    }
+    .timeline-item::before {
+      content: '💙';
+      position: absolute;
+      left: -43px;
+      top: 15px;
+      background: var(--bg);
+      border-radius: 50%;
+      font-size: 0.9rem;
+    }
+    .timeline-date {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+    .timeline-title { font-weight: 600; font-size: 1.1rem; }
+    .timeline-desc { font-size: 0.95rem; color: var(--text-light); margin-top: 5px; }
+
+    /* Photo Section */
+    .photo-section {
+      text-align: center;
+    }
+    .photo-card {
+      background: var(--card-bg);
+      padding: 15px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);
+      display: inline-block;
+      max-width: 100%;
+    }
+    .photo-card img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+    }
+    .photo-caption {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Happy Mother's Day</h1>
+    <p>Happy Mother’s Day, Mom! Thank you for your endless love, patience, and constant support. This site is a little place dedicated to celebrating you.</p>
+  </header>
+
+  <div class="container">
+    
+    <!-- Timeline Section -->
+    <section>
+      <h2>Moments to Remember</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Earliest Memories</div>
+          <div class="timeline-title">Always Being There</div>
+          <p class="timeline-desc">Thanks for putting up with me over the years, teaching me how things work, and making sure I stayed on the right track.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">What I want to Say</div>
+          <div class="timeline-title">Unforgettable Journeys</div>
+          <p class="timeline-desc">ขอบคุณสำหรับการสั่งสอนทั้งหมด และขอโทษที่บางครั้งผมทำตัวไม่ดีกับคุณแม่ แต่ผมอยากให้คุณแม่รู้ว่าผมรักคุณแม่มากๆครับ และผมพยายามที่จะเป็นคนที่ดีขึ้นในทุกๆวันครับ</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Today & Beyond</div>
+          <div class="timeline-title">Always Grateful</div>
+          <p class="timeline-desc">No matter how busy life gets, I am always thankful for your meals, advice, and quiet support.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Photo Section -->
+    <section class="photo-section">
+      <h2>Special Memories</h2>
+      <div class="photo-card">
+        <!-- Replace 'your-photo.jpg' with the path or URL to your image -->
+        <img src="577227465_26091974433724755_2649972507815755353_n.jpg" alt="Special Moment with Mom">
+        <p class="photo-caption">Love you always, Mom ❤️</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ for Mother's Day</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
